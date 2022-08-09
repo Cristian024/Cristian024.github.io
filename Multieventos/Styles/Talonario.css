@@ -1,0 +1,629 @@
+Body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(rgb(33, 33, 33) 30%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #161616;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    height: 45px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+    box-shadow: 0px 0px 10px #39396a;
+    background: #39396a;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(19, 19, 19);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        box-shadow: 0px 0px 10px #39396a;
+        background: #39396a;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+#seleccion {
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    padding: 0;
+    height: 700px;
+    justify-content: center;
+}
+
+#seleccion .card {
+    margin: auto;
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 500px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250%;
+    align-items: center;
+    overflow: hidden;
+}
+
+#seleccion #ingresar {
+    background-image: url(/Images/14800-1.jpg);
+}
+
+#seleccion #historial {
+    background-image: url(/Images/Talonarios-page-img-1.jpg);
+}
+
+#seleccion .card div {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#seleccion .card div:hover {
+    background-color: #161616b0;
+}
+
+#seleccion .card div:hover h1 {
+    opacity: 100%;
+}
+
+#seleccion .card div h1 {
+    opacity: 0;
+    font-size: 80px;
+    color: white;
+    margin-top: 200px;
+    padding: 0px 20px;
+    width: 90%;
+    transition: 1s;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+#Talonario {
+    padding: 1px 50px;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#Talonario .cabecera h1 {
+    font-family: 'Gidugu', sans-serif;
+    margin: auto;
+    text-align: center;
+    font-size: 5.3vw;
+    letter-spacing: 0.1vw;
+    font-weight: 900;
+    width: 35vw;
+    height: 2.5vw;
+    transform: scaleX(2.6) scaleY(1.2) translateY(-2.5vw);
+}
+
+#Talonario .cabecera h2 {
+    font-family: 'Gidugu', sans-serif;
+    margin: auto;
+    text-align: center;
+    font-size: 3.2vw;
+    letter-spacing: 0.1vw;
+    font-weight: 900;
+    width: 100%;
+    transform: scaleX(1.2);
+}
+
+#Talonario .fechas p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.60vw;
+    width: 75vw;
+    font-weight: 700;
+    transform: scaleX(1.2);
+}
+
+#Talonario .fechas div {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+}
+#Talonario .fechas div table {
+    width: 30%;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border: 3px solid;
+    border-radius: 5px;
+    border-spacing: 0;
+}
+#Talonario .fechas div table td{
+    text-align: center;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+}
+#Talonario .fechas div table tr:last-child>td {
+    height:4vw;
+    border-bottom: none;
+    background-color: rgb(218, 218, 218);
+}
+#Talonario .fechas div table tr td:last-child {
+    border-right: none;
+}
+#Talonario .fechas div table td input{
+    background: none;
+    text-align: center;
+    font-size: 1.3vw;
+    letter-spacing: 0.5vw;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+#Talonario .fechas div fieldset{    
+    width: 35%;
+    text-align: center;
+    border: solid 3px;
+    border-radius: 5px;
+    background-color: rgb(218, 218, 218);
+}
+#Talonario .fechas div fieldset h1{
+    font-size: 2vw;
+}
+
+#Talonario .nombre table{
+    margin-top: 0.5vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+    width: 100%;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border: 3px solid;
+    border-radius: 5px;
+    border-spacing: 0;
+}
+#Talonario .nombre table td{
+    height:3vw;
+    align-items: center;
+    border-bottom: 1.5px solid;
+    display: flex;
+}
+#Talonario .nombre table td div{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+#Talonario .nombre table tr:last-child>td {
+    border-bottom: none;
+}
+#Talonario .nombre table td input{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 1.5vw;
+    margin-left: 0.5vw;
+}
+
+#Talonario .produc table{
+    margin-top: 0.5vw;
+    width: 100%;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border: 3px solid;
+    border-radius: 5px;
+    border-spacing: 0;
+}
+#Talonario .produc table .cant{
+    width: 7%;
+    border-right: solid 3px;
+    background-color: rgb(218, 218, 218);
+}
+#Talonario .produc table .desc{
+    width: 73%;
+    border-right: solid 3px;
+}
+#Talonario .produc table .valp{
+    width: 20%;
+    background-color: rgb(218, 218, 218);
+}
+#Talonario .produc table .valp p{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#Talonario .produc table tr td, th{
+    height: 2vw;
+    border-bottom: solid 1.5px;
+}
+#Talonario .produc table tr:last-child>td  {
+    border-bottom: none;
+}
+#Talonario .produc table tr td input{
+    border: none;
+    background: none;
+    height: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+#Talonario .produc table tr td select{
+    cursor: pointer;
+    height: 100%;
+    border: solid white;
+    outline: none;
+    width: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+#Talonario .produc table tr td p{
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Roboto', sans-serif;
+}
+#Talonario .prectot{
+    padding: 0 0.5vw;
+    border-radius: 5px;
+    height: 4vw;
+    border: solid;
+    width: 30%;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Talonario .prectot h1{
+    font-size: 3vw;
+}
+#Talonario .prectot p{
+    font-size: 2vw;
+}
+#Talonario #numfact{
+    justify-content:space-between; 
+    align-items: center;
+    display: flex;
+    padding: 0 8vw;
+}
+#Talonario #numfact h2{
+    color: red;
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+}
+#Talonario #butones{
+    display: flex; 
+    width: 50%; 
+    justify-content: space-between;
+    align-items: center;
+}
+#Talonario #butones button{
+    -moz-appearance: inherit;
+    -o-appearance: inherit;
+    -ms-appearance: inherit;
+    appearance: inherit;
+    -webkit-appearance: inherit;
+    background-color: rgb(218, 218, 218);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+    width: 30%;
+    transition: 1s;
+    font-size: 1.5vw;
+    border: solid;
+}
+#Historial{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.activo{
+    box-shadow: 0px 0px 2vh#161616;
+    cursor: pointer;
+    width: 100%;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #161616;
+    border-radius: 1vh;
+    margin-bottom: 5vh;
+    overflow: hidden;
+    transition: 1s;
+    transition-delay: 0.5s;
+    color: white;
+    font-size: 5vh;
+    font-family: 'Inter', sans-serif;
+}
+.activo:hover{
+    box-shadow: 0px 0px 2vh #39396a;
+    background-color: #39396a;
+}
+.activo:hover .mes{
+    letter-spacing: 2vh;
+}
+.activo .mes{
+    transition: 1s;
+    transition-delay: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    background: none;
+    text-align: center;
+    color: white;
+    font-size: 5vh;
+    font-family: 'Inter', sans-serif;
+}
+.desact .mes{
+    color: white;
+    font-size: 5vh;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    background: none;
+    text-align: center;
+    letter-spacing: 2vh;
+}
+.activo div{
+    width: 100%;
+    background-color: #161616;
+    color: black;
+    letter-spacing: 0;
+}
+.desact{
+    border: solid #39396a;
+    cursor: pointer;
+    width: 100%;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1vh;
+    margin-bottom: 5vh;
+    overflow: hidden;
+    transition: 1s;
+    transition-delay: 0.5s;
+    color: white;
+    font-size: 5vh;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0px 0px 2vh #39396a;
+    background-color: #39396a;
+    letter-spacing: 2vh;
+}
+.desact div{
+    z-index: 100px;
+    width: 100%;
+    background-color: #161616;
+    color: black;
+    letter-spacing: 0;
+    font-size: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2vh;
+    cursor: pointer;
+    border-bottom: solid 3px #39396a;
+    transition: 1s;
+}
+.desact div:last-child{
+    border-bottom: none;
+}
+.desact div:first-child{
+    border-bottom: none;
+    cursor: auto;
+}
+.desact div p{
+    width: 30%;
+    text-align: center;
+    color: white;
+}
+.desact div:nth-child(2){
+    cursor: auto;
+    align-items: center;
+    height: 10vh;
+}
+.desact div:nth-child(2) p{
+    border-right: solid 3px #39396a;
+}
+.desact div:nth-child(2) p:last-child{
+    border-right: none;
+}
+.desact div:nth-child(2):hover{
+    background-color: #161616;
+}
+.desact div:hover{
+    background-color: #39396a;
+}
+
+#busc{
+    display: flex;
+    width: 80%;
+    height: 6vh;
+    margin: auto;
+    justify-content: space-between;
+    background-color: #39396aa6;
+    box-shadow: 0px 0px 2vh #39396a;
+    border-radius: 2vh;
+    margin-bottom: 5vh;
+    padding: 0 10%;
+    align-items: center;
+}
+#busc p{
+    font-size: 3vh;
+    color: white;
+    font-family: Inter, sans-serif;
+}
+#busc input{
+    background-color: #161616a9;
+    width: 60%;
+    outline: none;
+    border: none;
+    border-radius: 1vh;
+    height: 3vh;
+    color: white;
+    text-align: center;
+}
+#busc select{
+    background-color: #161616a9;
+    width: 20%;
+    outline: none;
+    border: none;
+    border-radius: 1vh;
+    height: 3vh;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#busc span{
+    color: white;
+    cursor: pointer;
+}
+#contenedor{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#contenedor div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 100px;
+    width: 100%;
+    background-color: #161616;
+    letter-spacing: 0;
+    font-size: 3vh;
+    display: flex;
+    padding: 0 2vh;
+    cursor: pointer;
+    transition: 1s;
+    font-family: 'Inter', sans-serif;
+    border-radius: 2vh;
+    margin-bottom: 2vh;
+}
+#contenedor div:hover{
+    background-color: #39396a;
+}

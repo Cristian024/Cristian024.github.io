@@ -1,0 +1,632 @@
+/*INVENTARIO*/
+
+
+
+#Inventario * {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+#Inventario {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(45, 45, 45);
+    background: linear-gradient(90deg, rgba(45, 45, 45, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+#Inventario .container {
+    font-family: 'Inter', sans-serif;
+    width: 95%;
+    margin: 10vh auto;
+    padding: 3rem 2rem;
+    background: rgb(55, 55, 55);
+    background: linear-gradient(133deg, rgb(55, 55, 55) 0%, rgb(4, 4, 4) 100%);
+    border-radius: 5vh;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    box-shadow: #101010be 0vh 10vh 10vh;
+}
+
+#Inventario .container .title {
+    letter-spacing: 3vh;
+    font-size: 4vw;
+    color: white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 0vh 0vh 7vh #c2c2d5;
+}
+
+#Inventario .container .products-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Inventario .container .products-container .card {
+    margin: auto;
+    width: 50vh;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 30px;
+    background: linear-gradient(133deg, rgba(42,42,42,1) 5%, rgba(55,55,55,0.0449929971988795) 100%);
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.491);
+    outline: .1rem solid rgb(70, 70, 70);
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+#Inventario .container .products-container .card:hover {
+    outline: .1rem solid #39396a;
+    outline-offset: 0;
+    background: #39396a;
+    box-shadow: 0rem 0rem 4rem #39396a;
+}
+
+
+#Inventario .container .products-container .card img {
+    height: 35vh;
+    width: 95%;
+    transition: 2s;
+}
+
+#Inventario .container .products-container .card:hover img {
+    transform: scale(.9);
+}
+
+
+#Inventario #inven .card h1 {
+    font-family: 'Rubik', sans-serif;
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: white;
+    transition: 1.7s;
+}
+
+#Inventario #inven .card:hover h1 {
+    font-size: 2.2rem;
+}
+
+#Inventario #inven .card:hover h2 {
+    font-size: 1.3rem;
+}
+
+#Inventario #inven .card h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    transition: 1.8s;
+}
+
+#Inventario #formcont button {
+    -moz-appearance: inherit;
+    -o-appearance: inherit;
+    -ms-appearance: inherit;
+    appearance: inherit;
+    -webkit-appearance: inherit;
+    background-color: #39396a;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 30%;
+    transition: 1s;
+}
+
+#Inventario #formcont button:hover {
+    box-shadow: #39396a 0px 0px 20px;
+}
+
+#Inventario #formcont a:link,
+a:visited,
+a:active {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+#Inventario .products-preview {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    font-family: 'Inter', sans-serif;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+#Inventario .products-preview .preview {
+    box-shadow: 0px 0px 100px rgb(37, 37, 37);
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    position: relative;
+    margin: 2rem;
+    width: 35rem;
+    outline: .1rem solid rgb(70, 70, 70);
+    height: 65vh;
+    overflow-y: scroll;
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+}
+
+#Inventario .products-preview .preview::-webkit-scrollbar {
+    width: 2vh;
+}
+
+#Inventario .products-preview .preview::-webkit-scrollbar-track {
+    background: none;
+    padding: 1vh;
+}
+
+#Inventario .products-preview .preview::-webkit-scrollbar-thumb {
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+#Inventario .products-preview .preview.active {
+    display: inline-block;
+}
+
+#Inventario .products-preview .preview h1 {
+    color: white;
+    font-size: 5vh;
+}
+
+#Inventario .products-preview .preview h2 {
+    color: white;
+    font-size: 3vh;
+}
+
+#Inventario .products-preview .preview h3 {
+    color: white;
+    padding: .1rem 0;
+    font-size: 2vh;
+}
+
+#Inventario .products-preview .preview p {
+    color: white;
+    padding: .1rem 0;
+    font-size: 1.5vh;
+}
+
+#Inventario .products-preview .preview button {
+    -moz-appearance: inherit;
+    -o-appearance: inherit;
+    -ms-appearance: inherit;
+    appearance: inherit;
+    -webkit-appearance: inherit;
+    background-color: #39396a;
+    color: #fff;
+    font-size: 3vh;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    height: 5vh;
+    width: 20vh;
+    transition: 1s;
+}
+
+#Inventario .products-preview .preview button:hover {
+    box-shadow: #39396a 0px 0px 20px;
+}
+
+.visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visor div {
+    background-color: #161616;
+    width: 50%;
+    height: 700px;
+}
+
+
+.editor {
+    font-family: 'Rubik', sans-serif;
+    background-color: #161616;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 800px;
+}
+
+.editor .imgeditor {
+    margin-top: 10px;
+    outline: 4px solid #161616;
+    outline-offset: 0.5rem;
+    margin: auto;
+    border-radius: 10px;
+    height: 60%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 80%;
+}
+
+.editor .buttons {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editor .buttons button {
+    -moz-appearance: inherit;
+    -o-appearance: inherit;
+    -ms-appearance: inherit;
+    appearance: inherit;
+    -webkit-appearance: inherit;
+    background-color: #39396a;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 30%;
+    transition: 1s;
+}
+
+.editor .buttons button:hover {
+    box-shadow: #39396a 0px 0px 20px;
+}
+
+.editor .imgcontent {
+    border-radius: 25px 0px 25px;
+    text-align: center;
+    background-color: #101010;
+    width: 40%;
+}
+
+.editor .imgcontent h1 {
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.editor .imgeditor img {
+    width: auto;
+    height: 35rem;
+}
+
+.editor .forms {
+    text-align: left;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor .forms label {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.editor .forms input {
+    background-color: rgb(37, 37, 37);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    border-radius: 5px;
+    border: 0.5px #161616;
+    padding: 0 15px;
+    height: 30px;
+    margin: 8px 0;
+    transition: 0.5s;
+}
+
+.editor .forms textarea {
+    background-color: rgb(37, 37, 37);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    border-radius: 5px;
+    border: 0.5px #161616;
+    padding: 0 15px;
+    margin: 8px 0;
+    transition: 0.5s;
+}
+
+.editor .forms textarea:focus {
+    border: 0.2px solid white;
+}
+
+.editor .forms input:focus {
+    border: 0.2px solid white;
+}
+
+.conteditor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    width: 60%;
+    height: 40%;
+}
+
+.editor #addi {
+    color: white;
+}
+
+.editor #addi span {
+    margin: auto;
+}
+
+
+/*NAV*/
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #161616;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    height: 45px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+    box-shadow: 0px 0px 10px #39396a;
+    background: #39396a;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(19, 19, 19);
+        top: 10vh;
+        left: -100%;
+        text-align: center;
+        z-index: 100;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        box-shadow: 0px 0px 10px #39396a;
+        background: #39396a;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+/*INICIO*/
+
+#inicio {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(37, 37, 37);
+}
+
+.banner {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background-image: url(/Images/si.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 10vh;
+}
+
+#inicio .container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+#inicio .container .card {
+    cursor: pointer;
+    margin-bottom: 50px;
+    width: 80vh;
+    height: 40vh;
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#inicio .container .card:hover {
+    transform: translateY(-15px);
+}
+
+#inicio #inventario {
+    border-radius: 100%;
+    background: url(/Images/inventario-fantasma-stock.1.15.jpg);
+    width: 50%;
+    height: 37vh;
+    background-size: cover;
+    background-position-x: -130px;
+}
+
+#inicio #facturacion {
+    border-radius: 100%;
+    background: url(/Images/14800-1.jpg);
+    width: 50%;
+    height: 37vh;
+    background-size: cover;
+    background-position-x: -60px;
+}
+
+#inicio #eventos {
+    border-radius: 100%;
+    background: url(/Images/10.jpg);
+    width: 50%;
+    height: 37vh;
+    background-size: cover;
+    background-position-x: -60px;
+}
+
+#inicio .container .card .content {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 150px 50px;
+    padding: 10px 15px;
+}
+
+#inicio .container .card .content .title h3 {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+    font-size: 4vh;
+    color: white;
+}
+
+#inicio .container .card .content .text p {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
+    font-size: 3vh;
+    color: white;
+}
+
+#inicio .container .card .bt-container .boton {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+}
+
+#inicio .container .card .bt-container .boton:hover {
+    background-color: rgb(208, 208, 208);
+    box-shadow: 0px 0px 10px white;
+}
+
+#inicio #inv {
+    background-color: rgb(239, 170, 100);
+}
+
+#inicio #fac {
+    background-color: rgb(140, 155, 240);
+}
+
+#inicio #eve {
+    background-color: lightgreen;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talonario</title>
+    <link rel="stylesheet" href="/Styles/Talonario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidugu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body onload="cargartal()">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a class="enlace">
+            <img src="/Images/Cristian_Robledo_Isotipo-removebg-preview.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li><a href="index.html">Inventario</a></li>
+            <li><a class="active" href="Talonario.html">Talonario</a></li>
+            <li><a href="Eventos.html">Eventos</a></li>
+        </ul>
+    </nav>
+
+    <br><br><br>
+
+    <div id="seleccion" style="display: none;">
+        <div id="ingresar" class="card" onclick="ingresartalonario()">
+            <div>
+                <h1>Ingresar nueva oden</h1>
+            </div>
+        </div>
+        <div id="historial" class="card" onclick="historialtalonario()">
+            <div>
+                <h1>Historial de talonario</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="Talonario" style="display: none;">
+        <div class="cabecera">
+            <h1>RR PRODUCCIONES</h1>
+            <h2>ALQUILER PARA FIESTAS, EVENTOS Y ELABORACIÓN DE CARPAS</h2>
+        </div>
+        <div class="fechas">
+            <p>SILLAS - MESAS - CARPAS - TARIMAS - SONIDO - DECORACIÓN - PLANTA ELÉCTRICA</p>
+            <div>
+                <table>
+                    <tr>
+                        <td colspan="3">FECHA DE FACTURACIÓN</td>
+                    </tr>
+                    <tr>
+                        <td>DIA</td>
+                        <td>MES</td>
+                        <td>AÑO</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="date" min="2022-01-01" id="fechfact"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td colspan="3">FECHA DE VENCIMIENTO</td>
+                    </tr>
+                    <tr>
+                        <td>DIA</td>
+                        <td>MES</td>
+                        <td>AÑO</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="date" min="2022-01-01" id="fechven"></td>
+                    </tr>
+                </table>
+                <fieldset>
+                    <h1>ORDEN DE PEDIDO</h1>
+                    <div id="numfact">
+                        <h1>No.</h1>
+                        <h2 id="fact"></h2>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="nombre">
+            <table>
+                <tr>
+                    <td>
+                        <p>NOMBRE:</p>
+                        <input type="text" id="nombre">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>C.C o NIT:</p>
+                            <input type="number" id="cedula">
+                        </div>
+                        <div>
+                            <p>TEL:</p>
+                            <input type="number" id="telefono">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>DIRECCIÓN: </p>
+                        <input type="text" id="direccion">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produc">
+            <table id="cargo">
+                <tr>
+                    <th class="cant" style="background: none">CANT</th>
+                    <th class="desc">DESCRIPCIÓN</th>
+                    <th class="valp" style="background: none">VALOR PARCIAL</th>
+                </tr>
+
+            </table>
+        </div>
+        <div style="display: flex; justify-content: space-between;  margin: 0.5vw 0;">
+            <div id="butones">
+                <button onclick="cancelartal()">CANCELAR</button>
+                <button onclick="registrartal()">REGISTRAR</button>
+            </div>
+            <div class="prectot">
+                <h1>TOTAL $</h1>
+                <p id="total"></p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="Historial">
+        <div id="busc">
+            <p>Busqueda</p>
+            <input type="text" id="content">
+            <select id="filt">
+                <option value=""></option>
+                <option value="dire">Dirección</option>
+                <option value="nombre">Nombre</option>
+                <option value="numord">Numero de orden</option>
+            </select>
+            <span class="material-symbols-outlined" onclick="busqueda()">
+                search
+            </span>
+            <span class="material-symbols-outlined" onclick="cancelar()" style="display: none;" id="cancelar">
+                close
+            </span>
+        </div>
+        <div id="contenedor">
+
+        </div>
+    </div>
+
+    <button onclick="pdf()">nose</button>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="/Script/Configuración.js"></script>
+<script src="/Script/Talonario.js"></script>
+
+</html>

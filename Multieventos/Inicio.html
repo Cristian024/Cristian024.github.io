@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Script/guardar.js"></script>
+    <link rel="stylesheet" href="/Styles/Styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+
+<body id="inicio">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a class="enlace">
+            <img src="/Images/Cristian_Robledo_Isotipo-removebg-preview.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a href="index.html">Inventario</a></li>
+            <li><a href="Talonario.html">Talonario</a></li>
+            <li><a href="Eventos.html">Eventos</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+    </div>
+
+    <div class="container">
+        <div class="card" onclick="inventario()">
+            <div id="inventario"></div>
+            <div class="content">
+                <div class="title">
+                    <h3>Inventario</h3>
+                </div>
+                <div class="text">
+                    <p>Se puede modificar o verificar inventario.</p>
+                </div>
+                <div class="bt-container">
+                    <button class="boton" id="inv">Entrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="talonario()">
+            <div id="facturacion"></div>
+            <div class="content">
+                <div class="title">
+                    <h3>Talonario</h3>
+                </div>
+                <div class="text">
+                    <p>Se pueden llevar registro del material necesario para un evento.</p>
+                </div>
+                <div class="bt-container">
+                    <button class="boton" id="fac">Entrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="eventos"></div>
+            <div class="content">
+                <div class="title">
+                    <h3>Eventos</h3>
+                </div>
+                <div class="text">
+                    <p>Se puede llevar registro de todos los eventos realizados y por realizar.</p>
+                </div>
+                <div class="bt-container">
+                    <button class="boton" id="eve">Entrar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
