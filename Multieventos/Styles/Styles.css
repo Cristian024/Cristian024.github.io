@@ -554,7 +554,7 @@ section {
 
 #inicio #inventario {
     border-radius: 100%;
-    background: url(/Images/inventario-fantasma-stock.1.15.jpg);
+    background: url(Images/inventario-fantasma-stock.1.15.jpg);
     width: 50%;
     height: 37vh;
     background-size: cover;
@@ -563,7 +563,7 @@ section {
 
 #inicio #facturacion {
     border-radius: 100%;
-    background: url(/Images/14800-1.jpg);
+    background: url(Images/14800-1.jpg);
     width: 50%;
     height: 37vh;
     background-size: cover;
@@ -572,7 +572,7 @@ section {
 
 #inicio #eventos {
     border-radius: 100%;
-    background: url(/Images/10.jpg);
+    background: url(Images/10.jpg);
     width: 50%;
     height: 37vh;
     background-size: cover;
