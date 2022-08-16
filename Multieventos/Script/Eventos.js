@@ -6,6 +6,7 @@ function cargareven(){
         querySnapshot.forEach(function (doc) {
             if(doc.data().fin== "No"){
                 var num = Math.random() * (0 - 2) + 0;
+                num = parseInt(num);
                 alert(num)
                 var cont = document.createElement("div")
                 cont.setAttribute("style", "background-color: " + coloresfon[num])
