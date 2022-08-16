@@ -151,11 +151,11 @@ section {
 }
 
 #seleccion #ingresar {
-    background-image: url(/Images/14800-1.jpg);
+    background-image: url(Multieventos/Images/14800-1.jpg);
 }
 
 #seleccion #historial {
-    background-image: url(/Images/Talonarios-page-img-1.jpg);
+    background-image: url(Multieventos/Images/Talonarios-page-img-1.jpg);
 }
 
 #seleccion .card div {
